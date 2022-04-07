@@ -1,5 +1,8 @@
 import React, { Component } from "react"
-import logo from "./logo.svg"
+import React from "react"
+import Header from "./components/Header"
+import Main from "./components/Main"
+import Footer from "./components/Footer"
 import "./App.css"
 
 class LambdaDemo extends Component {
@@ -31,20 +34,15 @@ class LambdaDemo extends Component {
   }
 }
 
-class App extends Component {
-  render() {
+
+
+export default function App() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
+        <div className="container">
+            <Header />
+            <Main />
+            <Footer />
+        </div>
     )
-  }
 }
 
-export default App
